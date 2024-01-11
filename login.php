@@ -11,8 +11,7 @@ if(isset($_POST['tombol'])){
     $password = md5($_POST['password']);
 
     //3. menulis query
-    $qry = "SELECT * FROM users WHERE email='$email' 
-    AND password='$password'";
+    $qry = "SELECT * FROM users WHERE email='$email' AND password='$password'";
 
     //4. jalankan query
     $result = mysqli_query($con,$qry);
@@ -42,8 +41,7 @@ if(isset($_POST['tombol'])){
         
 
         //update last log
-        $qry_update = "UPDATE users SET last_log=now() 
-        WHERE id='$id'";
+        $qry_update = "UPDATE users SET last_log=now() WHERE id='$id'";
         $res_update = mysqli_query($con, $qry_update);
 
         //pengalihan ke halaman index
@@ -108,7 +106,7 @@ if(isset($_POST['tombol'])){
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
-              <input type="checkbox" id="remember" name="ingat" value="yes">
+                  <input type="checkbox" id="remember" name="ingat" value="yes">
               <label for="remember">
                 Remember Me
               </label>

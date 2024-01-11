@@ -14,7 +14,7 @@
           <img src="dist/img/gmbr.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?php echo $l_nama ?></a>
+        <a href="#" class="d-block"><?php echo $l_nama ?></a>
         </div>
       </div>
 
@@ -55,34 +55,52 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Buku
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right"></span>
+                Menu
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="../../index.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kategori buku</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../index2.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Penerbit</p>
+                </a>
+              </li>
+            </ul>
+            </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Alat tulis
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right"></span>
+                Produk
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Pemesanan
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right"></span>
-              </p>
-            </a>
-            
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="../../index.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Buku</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../index2.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Alat Tulis</p>
+                </a>
+              </li>
+              
+            </ul>
           </li>
-        </ul>
+              
       </nav>
       <!-- /.sidebar-menu -->
     </div>
