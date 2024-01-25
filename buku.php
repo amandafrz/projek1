@@ -69,6 +69,9 @@ include_once("cek_login.php");
                     <th>Harga</th>
                   </tr>
                   </thead>
+                  <div class="col-md-12 m-auto mt-3">
+          <a class="btn btn-outline-secondary mb-1" href = "tambahbuku.php" ><i class="fa-solid fa-user-plus"></i> Tambah Data </a>
+</div>
                   <tbody>
                   <?php
                     //1. membuat koneksi
