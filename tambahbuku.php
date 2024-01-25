@@ -25,9 +25,10 @@ include_once("cek_login.php");
   <!-- Navbar -->
   <?php include_once('navbar.php') ?>
   <!-- /.navbar -->
-
+<?php include_once('footer.php') ?>
   <!-- Main Sidebar Container -->
   <?php include_once('sidebar.php') ?>
+  
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -36,7 +37,7 @@ include_once("cek_login.php");
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Katalog Buku</h1>
+            <h1>Tambah Data</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -45,6 +46,7 @@ include_once("cek_login.php");
             </ol>
           </div>
         </div>
+        
       </div><!-- /.container-fluid -->
     </section>
 
@@ -57,6 +59,7 @@ include_once("cek_login.php");
               <div class="card-header">
                 <h3 class="card-title">Tambah Buku</h3>
               </div>
+              
               <!-- /.card-header -->
               <!-- form start -->
               <form class="form-horizontal">
@@ -100,7 +103,10 @@ include_once("cek_login.php");
               </form>
             </div>
             <!-- /.card -->
+            
 </div>
+
 <script src="js/bootstrap.js"></script>
 </body>
+
 </html>
