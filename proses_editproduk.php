@@ -7,12 +7,12 @@ $id = $_POST['id'];
 $kd_brg = $_POST['kd_brg'];
 $kategori = $_POST['kategori'];
 $nama_brg = $_POST['nama_brg'];
-$merk = $_POST['merk'];
+$merk_brg = $_POST['merk_brg'];
 $stok = $_POST['stok'];
 $harga = $_POST['harga'];
 
 //3. membuat query INSERT
-$qry ="UPDATE produk SET kd_brg='$kd_brg',kategori='$kategori', nama_brg='$nama_brg',merk='$merk',stok='$stok',
+$qry ="UPDATE produk SET kd_brg='$kd_brg',kategori='$kategori', nama_brg='$nama_brg',merk_brg='$merk_brg',stok='$stok',
 harga='$harga' WHERE id='$id'";
 
 //4. menjalankan query

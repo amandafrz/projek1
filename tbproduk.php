@@ -9,7 +9,7 @@ include_once("cek_login.php");
   <title>AdminLTE 3 | Blank Page</title>
   <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/all.css">
-
+    
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -101,7 +101,7 @@ include_once("cek_login.php");
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Data Detail <?php echo $data['nama_brg'] ?></h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Data Detail <?php echo $data['id'] ?></h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -118,9 +118,9 @@ include_once("cek_login.php");
                                 <br>
                                 <span class fs-3 text><?php echo $data['nama_brg'] ?> </span>
                                 <hr>
-                                <label for="merk" class="form-label"><b>Merk Barang</b></label>
+                                <label for="merk_brg" class="form-label"><b>Merk Barang</b></label>
                                 <br>
-                                <span class fs-3 text><?php echo $data['merk'] ?> </span>
+                                <span class fs-3 text><?php echo $data['merk_brg'] ?> </span>
                                 <hr>
                                 <label for="stok" class="form-label"><b>Stok Barang</b></label>
                                 <br>
@@ -137,7 +137,7 @@ include_once("cek_login.php");
                     </div>
                         </div>
                         </div>
-                    <td><a href="form_edit.php?id=<?php echo $data['id'] ?>" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></a>
+                    <td><a href="editproduk.php?id=<?php echo $data['id'] ?>" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></a>
                    
                     <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $data['id'] ?>"><i class="fa fa-trash"></i></button>
                     <!-- Modal -->
@@ -153,7 +153,7 @@ include_once("cek_login.php");
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                    <a href="proses_hapus.php?id=<?php echo $data['id'] ?>" class="btn btn-primary">Ya</a>
+                    <a href="proses_hapus.php?id=<?php echo $data['id_mhs'] ?>" class="btn btn-primary">Ya</a>
             </div>
             </div>
             </div>

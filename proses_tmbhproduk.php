@@ -6,13 +6,13 @@ include_once("koneksi.php");
 $kd_brg = $_POST['kd_brg'];
 $kategori = $_POST['kategori'];
 $nama_brg = $_POST['nama_brg'];
-$merk = $_POST['merk'];
+$merk_brg = $_POST['merk_brg'];
 $stok = $_POST['stok'];
 $harga = $_POST['harga'];
 
 //3. membuat query INSERT
-$qry ="INSERT INTO produk (kd_brg,kategori,nama_brg,merk,stok,harga) VALUES ('$kd_brg',
-'$kategori','$nama_brg','$merk','$stok','$harga')";
+$qry ="INSERT INTO produk (kd_brg,kategori,nama_brg,merk_brg,stok,harga) VALUES ('$kd_brg',
+'$kategori','$nama_brg','$merk_brg','$stok','$harga')";
 
 //4. menjalankan query
 $simpan = mysqli_query($con,$qry);
