@@ -79,7 +79,7 @@ include_once("cek_login.php");
                     //1. membuat koneksi
                     include_once("koneksi.php");
                     //2. membuat query untuk menampilkan seluruh data
-                    $qry = "SELECT * FROM produk";
+                    $qry = "SELECT *, pesanan.id as id_p FROM pesanan INNER JOIN produk ON pesanan.pesanans_id=pesanan.id";
                     //3. menjalankan query
                     $tampil = mysqli_query($con,$qry);
                     //4. menampilkan data menggunakan looping foreach

@@ -10,7 +10,7 @@ $harga = $_POST['harga'];
 $alamat = $_POST['alamat'];
 
 //3. membuat query INSERT
-$qry ="INSERT INTO produk (kd_brg,nama_brg,jumlah,harga,alamat) VALUES ('$kd_brg',
+$qry ="INSERT INTO pesanan (kd_brg,nama_brg,jumlah,harga,alamat) VALUES ('$kd_brg',
 '$nama_brg','$jumlah','$harga','$alamat')";
 
 //4. menjalankan query
