@@ -66,22 +66,27 @@ include_once("cek_login.php");
                     <label for="kd_brg">Kode Barang</label>
                     <input type="kd_brg" name="kd_brg" class="form-control" id="kd_brg" placeholder="kd_brg">
                   </div>
+
                   <div class="form-group">
                     <label for="kategori">Kategori</label>
                     <input type="kategori" name="kategori" class="form-control" id="kategori" placeholder="kategori">
                   </div>
+
                   <div class="form-group">
                     <label for="nama_brg">Nama Barang</label>
                     <input type="nama_brg" name="nama_brg" class="form-control" id="nama_brg" placeholder="nama_brg">
                   </div>
+
                   <div class="form-group">
                     <label for="merk">Merk Barang</label>
                     <input type="merk" name="merk" class="form-control" id="merk" placeholder="merk">
                   </div>
+
                   <div class="form-group">
                     <label for="stok">Stok Barang</label>
                     <input type="stok" name="stok" class="form-control" id="stok" placeholder="stok">
                   </div>
+
                   <div class="form-group">
                     <label for="harga">Harga Satuan</label>
                     <input type="harga" name="harga" class="form-control" id="harga" placeholder="harga">
@@ -91,7 +96,7 @@ include_once("cek_login.php");
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary ">Submit</button>
+                  <a class="btn btn-secondary" href = "tbproduk.php">Submit</a>
                 </div>
               </form>
             </div>

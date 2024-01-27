@@ -50,7 +50,8 @@ include_once("cek_login.php");
 
     <!-- Main content -->
     <section class="content">
-
+    <div class="col-md-12 m-auto mt-3">
+          <a class="btn btn-outline-secondary mb-1" href = "tmbhproduk.php" ><i class="fa-solid fa-user-plus"></i> Tambah Barang </a>
       <!-- Default box -->
       <div class="card">
               <div class="card-header">
@@ -71,8 +72,7 @@ include_once("cek_login.php");
                     <th>Aksi</th>
                   </tr>
                   </thead>
-                  <div class="col-md-12 m-auto mt-3">
-          <a class="btn btn-outline-secondary mb-1" href = "tmbhproduk.php" ><i class="fa-solid fa-user-plus"></i> Tambah Barang </a>
+                  
                   <tbody>
                   <?php
                     //1. membuat koneksi
@@ -93,7 +93,71 @@ include_once("cek_login.php");
                     <td><?php echo $data['merk_brg'] ?></td>
                     <td><?php echo $data['stok'] ?></td>
                     <td><?php echo $data['harga'] ?></td>
-                    <td> 4</td>
+                    <td> <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $data['id'] ?>" class="btn-warning btn-sm "> Lihat </td>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Data Detail <?php echo $data['nama_brg'] ?></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                            <div class="mb-3">       
+                                <label for="kd_brg" class="form-label"><b>Kode Barang</b></label>
+                                <br>
+                                <span class fs-3 text><?php echo $data['kd_brg'] ?> </span>
+                                <hr>
+                                <label for="kategori" class="form-label"><b>Kategori</b></label>
+                                <br>
+                                <span class fs-3 text><?php echo $data['kategori'] ?> </span>
+                                <hr>
+                                <label for="nama_brg" class="form-label"><b>Nama Barang</b></label>
+                                <br>
+                                <span class fs-3 text><?php echo $data['nama_brg'] ?> </span>
+                                <hr>
+                                <label for="merk" class="form-label"><b>Merk Barang</b></label>
+                                <br>
+                                <span class fs-3 text><?php echo $data['merk'] ?> </span>
+                                <hr>
+                                <label for="stok" class="form-label"><b>Stok Barang</b></label>
+                                <br>
+                                <span class fs-3 text><?php echo $data['stok'] ?> </span>
+                                <hr>
+                                <label for="harga" class="form-label"><b>Harga Satuan</b></label>
+                                <br>
+                                <span class fs-3 text><?php echo $data['harga'] ?> </span>                               
+                            </div>
+                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                        </div>
+                        </div>
+                    <td><a href="form_edit.php?id=<?php echo $data['id'] ?>" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></a>
+                   
+                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $data['id'] ?>"><i class="fa fa-trash"></i></button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="hapus<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="hapus<?php echo $data['id'] ?>" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"><b>Warning</b><i class="fa-solid fa-circle-exclamation"></i></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Apakah kamu yakin menghapus <b><?php echo $data['nama'] ?> dalam data barang ini? </b>?
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
+                    <a href="proses_hapus.php?id=<?php echo $data['id_mhs'] ?>" class="btn btn-primary">Ya</a>
+            </div>
+            </div>
+            </div>
+            </div>
+            </td>
+
                   </tr>
                   <?php
                     }
