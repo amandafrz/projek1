@@ -71,6 +71,8 @@ include_once("cek_login.php");
                     <th>Aksi</th>
                   </tr>
                   </thead>
+                  <div class="col-md-12 m-auto mt-3">
+          <a class="btn btn-outline-secondary mb-1" href = "tmbhproduk.php" ><i class="fa-solid fa-user-plus"></i> Tambah Barang </a>
                   <tbody>
                   <?php
                     //1. membuat koneksi
@@ -97,6 +99,7 @@ include_once("cek_login.php");
                     }
                     ?>
                   </tbody>
+
                   <tfoot>
                   <tr>
                   <th>No</th>
