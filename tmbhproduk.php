@@ -7,7 +7,6 @@ include_once("cek_login.php");
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Blank Page</title>
-
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -86,7 +85,7 @@ include_once("cek_login.php");
                     <label for="stok">Stok Barang</label>
                     <input type="stok" name="stok" class="form-control" id="stok" placeholder="stok">
                   </div>
-
+                  
                   <div class="form-group">
                     <label for="harga">Harga Satuan</label>
                     <input type="harga" name="harga" class="form-control" id="harga" placeholder="harga">
@@ -96,7 +95,7 @@ include_once("cek_login.php");
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <a class="btn btn-secondary" href = "tbproduk.php">Submit</a>
+                  <button type="submit" class="btn btn-primary ">Submit</button>
                 </div>
               </form>
             </div>
@@ -137,52 +136,7 @@ include_once("cek_login.php");
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-<!-- Page specific script -->
-<script>
-$(function () {
-  $.validator.setDefaults({
-    submitHandler: function () {
-      alert( "Form successful submitted!" );
-    }
-  });
-  $('#quickForm').validate({
-    rules: {
-      email: {
-        required: true,
-        email: true,
-      },
-      password: {
-        required: true,
-        minlength: 5
-      },
-      terms: {
-        required: true
-      },
-    },
-    messages: {
-      email: {
-        required: "Please enter a email address",
-        email: "Please enter a valid email address"
-      },
-      password: {
-        required: "Please provide a password",
-        minlength: "Your password must be at least 5 characters long"
-      },
-      terms: "Please accept our terms"
-    },
-    errorElement: 'span',
-    errorPlacement: function (error, element) {
-      error.addClass('invalid-feedback');
-      element.closest('.form-group').append(error);
-    },
-    highlight: function (element, errorClass, validClass) {
-      $(element).addClass('is-invalid');
-    },
-    unhighlight: function (element, errorClass, validClass) {
-      $(element).removeClass('is-invalid');
-    }
-  });
-});
+
 </script>
 </body>
 </html>

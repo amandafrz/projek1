@@ -7,6 +7,8 @@ include_once("cek_login.php");
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Blank Page</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/all.css">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -51,7 +53,7 @@ include_once("cek_login.php");
     <!-- Main content -->
     <section class="content">
     <div class="col-md-12 m-auto mt-3">
-          <a class="btn btn-outline-secondary mb-1" href = "tmbhproduk.php" ><i class="fa-solid fa-user-plus"></i> Tambah Barang </a>
+          <a class="btn btn-outline-secondary mb-1" href = "tmbhproduk.php" ><i class="fa-solid fa-plus"></i> Tambah Barang </a>
       <!-- Default box -->
       <div class="card">
               <div class="card-header">
@@ -151,7 +153,7 @@ include_once("cek_login.php");
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                    <a href="proses_hapus.php?id=<?php echo $data['id_mhs'] ?>" class="btn btn-primary">Ya</a>
+                    <a href="proses_hapus.php?id=<?php echo $data['id'] ?>" class="btn btn-primary">Ya</a>
             </div>
             </div>
             </div>
@@ -233,6 +235,9 @@ include_once("cek_login.php");
       "responsive": true,
     });
   });
+  
 </script>
+<script src="js/bootstrap.js"></script>
+<script src="js/all.js"></script>
 </body>
 </html>
