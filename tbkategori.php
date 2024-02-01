@@ -7,9 +7,7 @@ include_once("cek_login.php");
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Blank Page</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/all.css">
-    
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -38,7 +36,7 @@ include_once("cek_login.php");
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Barang</h1>
+            <h1>Kategori Produk</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -52,8 +50,7 @@ include_once("cek_login.php");
 
     <!-- Main content -->
     <section class="content">
-    <div class="col-md-12 m-auto mt-3">
-          <a class="btn btn-outline-secondary mb-1" href = "tmbhproduk.php" ><i class="fa-solid fa-plus"></i> Tambah Barang </a>
+
       <!-- Default box -->
       <div class="card">
               <div class="card-header">
@@ -65,22 +62,22 @@ include_once("cek_login.php");
                   <thead>
                   <tr>
                     <th>No</th>
-                    <th>Kode Barang</th>
+                    <th>Kode Kategori</th>
                     <th>Kategori</th>
-                    <th>Nama Barang</th>
-                    <th>Merk Barang</th>
-                    <th>Stok Barang</th>
-                    <th>Harga Satuan</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
-                  
+                  <div class="container">
+                  <div class="row">
+                      <div class="col-md-12 m-auto mt-3">
+                        <a class="btn btn-outline-secondary mb-1" href = "tmbh_kategori.php" ><i class="fa-solid fa-user-plus"></i> Tambah Data </a>
+                      <div class="card">
                   <tbody>
                   <?php
                     //1. membuat koneksi
                     include_once("koneksi.php");
                     //2. membuat query untuk menampilkan seluruh data
-                    $qry = "SELECT * FROM produk";
+                    $qry = "SELECT * FROM kategori";
                     //3. menjalankan query
                     $tampil = mysqli_query($con,$qry);
                     //4. menampilkan data menggunakan looping foreach
@@ -89,57 +86,14 @@ include_once("cek_login.php");
                     ?>
                   <tr>
                     <td><?php echo $nomor++ ?></td>
-                    <td><?php echo $data['kd_brg'] ?></td>
+                    <td><?php echo $data['kd_kategori'] ?></td>
                     <td><?php echo $data['kategori'] ?></td>
-                    <td><?php echo $data['nama_brg'] ?></td>
-                    <td><?php echo $data['merk_brg'] ?></td>
-                    <td><?php echo $data['stok'] ?></td>
-                    <td><?php echo $data['harga'] ?></td>
-                    <td> <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $data['id'] ?>" class="btn-warning btn-sm "> Lihat </td>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Data Detail <?php echo $data['id'] ?></h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                            <div class="mb-3">       
-                                <label for="kd_brg" class="form-label"><b>Kode Barang</b></label>
-                                <br>
-                                <span class fs-3 text><?php echo $data['kd_brg'] ?> </span>
-                                <hr>
-                                <label for="kategori" class="form-label"><b>Kategori</b></label>
-                                <br>
-                                <span class fs-3 text><?php echo $data['kategori'] ?> </span>
-                                <hr>
-                                <label for="nama_brg" class="form-label"><b>Nama Barang</b></label>
-                                <br>
-                                <span class fs-3 text><?php echo $data['nama_brg'] ?> </span>
-                                <hr>
-                                <label for="merk_brg" class="form-label"><b>Merk Barang</b></label>
-                                <br>
-                                <span class fs-3 text><?php echo $data['merk_brg'] ?> </span>
-                                <hr>
-                                <label for="stok" class="form-label"><b>Stok Barang</b></label>
-                                <br>
-                                <span class fs-3 text><?php echo $data['stok'] ?> </span>
-                                <hr>
-                                <label for="harga" class="form-label"><b>Harga Satuan</b></label>
-                                <br>
-                                <span class fs-3 text><?php echo $data['harga'] ?> </span>                               
-                            </div>
-                        </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                    </div>
-                        </div>
-                        </div>
-                    <td><a href="editproduk.php?id=<?php echo $data['id'] ?>" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></a>
-                   
-                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $data['id'] ?>"><i class="fa fa-trash"></i></button>
+                    <td class="project-actions text-right">
+                          <a class="btn btn-primary btn-sm" href="#">
+                              <i class="fas fa-folder"></i></a>
+                          <a class="btn btn-info btn-sm" href="edit_kategori.php">
+                              <i class="fas fa-pencil-alt"></i></a>
+                              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $data['id'] ?>"><i class="fa fa-trash"></i></button>
                     <!-- Modal -->
                     <div class="modal fade" id="hapus<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="hapus<?php echo $data['id'] ?>" aria-hidden="true">
                     <div class="modal-dialog">
@@ -149,7 +103,7 @@ include_once("cek_login.php");
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      Apakah kamu yakin menghapus <b><?php echo $data['nama'] ?> dalam data barang ini? </b>?
+                      Apakah Kamu Yakin Ingin Menghapus Data Mahasiswa Dengan Nama <b><?php echo $data['nama'] ?> </b>?
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
@@ -160,21 +114,21 @@ include_once("cek_login.php");
             </div>
             </td>
 
+                </tr>
+          <?php 
+           }
+           ?>
+                      </td>
                   </tr>
                   <?php
                     }
                     ?>
                   </tbody>
-
                   <tfoot>
                   <tr>
                   <th>No</th>
-                  <th>Kode Barang</th>
+                    <th>Kode Kategori</th>
                     <th>Kategori</th>
-                    <th>Nama Barang</th>
-                    <th>Merk Barang</th>
-                    <th>Stok Barang</th>
-                    <th>Harga Satuan</th>
                     <th>Aksi</th>
                   </tr>
                   </tfoot>
@@ -235,9 +189,6 @@ include_once("cek_login.php");
       "responsive": true,
     });
   });
-  
 </script>
-<script src="js/bootstrap.js"></script>
-<script src="js/all.js"></script>
 </body>
 </html>

@@ -34,12 +34,12 @@ include_once("cek_login.php");
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Tambah Barang</h1>
+            <h1>Tambah Kategori</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Tambah Barang</li>
+              <li class="breadcrumb-item active">Tambah Kategori</li>
             </ol>
           </div>
         </div>
@@ -55,48 +55,25 @@ include_once("cek_login.php");
             <!-- jquery validation -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Form Tambah Barang</h3>
+                <h3 class="card-title">Form Tambah Kategori</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form id="quickForm">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="kd_brg">Kode Barang</label>
-                    <input type="kd_brg" name="kd_brg" class="form-control" id="kd_brg" placeholder="kd_brg">
+                    <label for="kd_kategori">Kode Kategori</label>
+                    <input type="kd_kategori" name="kd_kategori" class="form-control" id="kd_kategori" placeholder="kd_kategori">
                   </div>
-
                   <div class="form-group">
                     <label for="kategori">Kategori</label>
                     <input type="kategori" name="kategori" class="form-control" id="kategori" placeholder="kategori">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="nama_brg">Nama Barang</label>
-                    <input type="nama_brg" name="nama_brg" class="form-control" id="nama_brg" placeholder="nama_brg">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="merk_brg">Merk Barang</label>
-                    <input type="merk_brg" name="merk_brg" class="form-control" id="merk_brg" placeholder="merk_brg">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="stok">Stok Barang</label>
-                    <input type="stok" name="stok" class="form-control" id="stok" placeholder="stok">
-                  </div>
-                  
-                  <div class="form-group">
-                    <label for="harga">Harga Satuan</label>
-                    <input type="harga" name="harga" class="form-control" id="harga" placeholder="harga">
-                  </div>
-                  
                   </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary ">Submit</button>
-                  <a class="btn btn-secondary" href = "index.php"> Batal </a>
+                  <a class="btn btn-secondary" href = "tbkategori.php"> Batal </a>
                 </div>
               </form>
             </div>
@@ -137,8 +114,52 @@ include_once("cek_login.php");
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-
+<!-- Page specific script -->
+<script>
+$(function () {
+  $.validator.setDefaults({
+    submitHandler: function () {
+      alert( "Form successful submitted!" );
+    }
+  });
+  $('#quickForm').validate({
+    rules: {
+      kd_kategori: {
+        required: true,
+        kd_kategori: true,
+      },
+      kategori: {
+        required: true,
+        kd_kategori: true,
+      },
+      terms: {
+        required: true
+      },
+    },
+    messages: {
+        kd_kategori: {
+        required: "Kode jangan dikosongin!",
+        kd_kategori: "Harap Kode Kategori diisi terlebih dahulu!"
+      },
+      kategori: {
+        required: "Kategori jangan dikosongin!",
+        kategori: "Harap Kategori diisi terlebih dahulu!"
+      },
+      terms: "Please accept our terms"
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
 </script>
 </body>
 </html>
-

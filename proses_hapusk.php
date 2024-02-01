@@ -5,14 +5,14 @@ include_once("koneksi.php");
 //2. mengambil id dari url
 $id = $_GET['id'];
 
-//3. membuat query INSERT
-$qry = "DELETE FROM produk WHERE id='$id'";
+//3. membuat query hapus
+$qry = "DELETE FROM kategori WHERE id='$id'";
 
 //4. menjalankan query
 $simpan = mysqli_query($con,$qry);
 
-//5. redirect ke index
+//5. redirect ke jurusan
 ?>
 <script>
-    document.location= "index.php";
+    document.location= "hapus_ktgr.php";
     </script>

@@ -3,15 +3,11 @@
 include_once("koneksi.php");
 
 //2. mengambil seluruh nilai input dan dimasukkan ke variabel
-$kd_brg = $_POST['kd_brg'];
-$nama_brg = $_POST['nama_brg'];
-$jumlah = $_POST['jumlah'];
-$harga = $_POST['harga'];
-$alamat = $_POST['alamat'];
+$kd_brg = $_POST['kd_kategori'];
+$nama_brg = $_POST['kategori'];
 
 //3. membuat query INSERT
-$qry ="INSERT INTO pesanan (kd_brg,nama_brg,jumlah,harga,alamat) VALUES ('$kd_brg',
-'$nama_brg','$jumlah','$harga','$alamat')";
+$qry ="INSERT INTO kategori (kd_kategori,kategori) VALUES ('$kd_kategori','$kategori')";
 
 //4. menjalankan query
 $simpan = mysqli_query($con,$qry);
@@ -21,4 +17,3 @@ $simpan = mysqli_query($con,$qry);
 <script>
     document.location= "index.php";
     </script>
-

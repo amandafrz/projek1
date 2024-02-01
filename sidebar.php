@@ -33,7 +33,7 @@
           </li>
         
           <li class="nav-item">
-            <a href="tbproduk.php" class="nav-link">
+            <a href="tbbarang.php" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                Produk
@@ -41,10 +41,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="tbpesanan.php" class="nav-link">
+            <a href="tbkategori.php" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-               Pesanan Saya
+               Kategori Produk
               </p>
             </a>
           </li>
