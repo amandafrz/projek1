@@ -91,33 +91,11 @@ include_once("cek_login.php");
                     <td class="project-actions text-right">
                           <a class="btn btn-primary btn-sm" href="#">
                               <i class="fas fa-folder"></i></a>
-                          <a class="btn btn-info btn-sm" href="edit_kategori.php">
+                          <a class="btn btn-info btn-sm" href="edit_ktgr.php">
                               <i class="fas fa-pencil-alt"></i></a>
-                              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#hapus<?php echo $data['id'] ?>"><i class="fa fa-trash"></i></button>
-                    <!-- Modal -->
-                    <div class="modal fade" id="hapus<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="hapus<?php echo $data['id'] ?>" aria-hidden="true">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel"><b>Warning</b><i class="fa-solid fa-circle-exclamation"></i></h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      Apakah Kamu Yakin Ingin Menghapus Data Mahasiswa Dengan Nama <b><?php echo $data['nama'] ?> </b>?
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                    <a href="proses_hapus.php?id=<?php echo $data['id_mhs'] ?>" class="btn btn-primary">Ya</a>
-            </div>
-            </div>
-            </div>
-            </div>
-            </td>
-
-                </tr>
-          <?php 
-           }
-           ?>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i></a>
                       </td>
                   </tr>
                   <?php

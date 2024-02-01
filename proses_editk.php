@@ -8,7 +8,7 @@ $kd_kategori = $_POST['kd_kategori'];
 $kategori = $_POST['kategori'];
 
 
-//3. membuat query INSERT
+//3. membuat query update
 $qry ="UPDATE kategori SET kd_kategori='$kd_kategori',kategori='$kategori' WHERE id='$id'";
 
 //4. menjalankan query
