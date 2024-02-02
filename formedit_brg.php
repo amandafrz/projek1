@@ -68,17 +68,49 @@ $brg = mysqli_fetch_array($data);
               <!-- form start -->
               
                 <div class="card-body">
-                <form action="proses_editk.php" method="POST" >
+                <form action="proses_editb.php" method="POST" >
                 <input type="hidden" name="id" value="<?php echo $brg['id'] ?>">
+
                   <div class="form-group">
-                    <label for="kd_kategori">Kode Kategori</label>
-                    <input type="kd_kategori" value="<?php echo $brg['kd_kategori']?>" name="kd_kategori" class="form-control" id="kd_kategori" placeholder="kd_kategori">
+                    <label for="kd_brg">Kode Barang</label>
+                    <input type="kd_brg" value="<?php echo $brg['kd_brg']?>" name="kd_brg" class="form-control" id="kd_brg" placeholder="kd_brg">
                   </div>
+
                   <div class="form-group">
-                    <label for="kategori">Kategori</label>
-                    <input type="kategori" value="<?php echo $brg['kategori']?>" name="kategori" class="form-control" id="kategori" placeholder="kategori">
+                    <label for="nama">Nama Barang</label>
+                    <input type="nama" value="<?php echo $brg['nama']?>" name="nama" class="form-control" id="nama" placeholder="nama">
+                  </div>
+
+                  <div class="mb-3">
+                    <select name="kategori" id="kategori" class="form-control">
+                            <option selected>Pilih Kategori</option>
+                            <?php
+                                include("koneksi.php");
+                                $query = "SELECT * FROM kategori";
+                                $hasil = mysqli_query($con,$query);
+                                foreach($hasil as $kt){
+                                    ?>
+                                    <option value="<?php echo $kt ['id']?>" <?php echo $brg['id']==$kt['id'] ? 'selected' : '' ?>>
+                                    <?php echo $kt ['kd_kategori']?> - <?php echo $kt ['kategori']?> </option>
+                                    <?php
+                                }
+                            ?>
+                    </select>
+                    <div id="kategori" class="form-text">
+                        
+                    </div>
+                    <div class="form-group">
+                    <label for="stok">Stok Barang</label>
+                    <input type="stok" value="<?php echo $brg['stok']?>" name="stok" class="form-control" id="stok" placeholder="stok">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="harga">Harga Barang</label>
+                    <input type="harga" value="<?php echo $brg['harga']?>" name="harga" class="form-control" id="harga" placeholder="harga">
                   </div>
                 </div>
+                </div>
+
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary ">Submit</button>

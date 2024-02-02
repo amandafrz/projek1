@@ -33,7 +33,7 @@
           </li>
         
           <li class="nav-item">
-            <a href="tbbarang.php" class="nav-link">
+            <a href="barang.php" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                Produk
