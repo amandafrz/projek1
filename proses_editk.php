@@ -17,6 +17,6 @@ $simpan = mysqli_query($con,$qry);
 //5. alihkan ke halaman index.php
 ?>
 <script>
-    document.location= "index.php";
+    document.location= "tbkategori.php";
     </script>
 
