@@ -114,7 +114,7 @@ $brg = mysqli_fetch_array($data);
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary ">Submit</button>
-                  <a class="btn btn-secondary" href = "barang.php"> Batal </a>
+                  <a class="btn btn-secondary" href = "index.php"> Batal </a>
                 </div>
               </form>
             </div>
