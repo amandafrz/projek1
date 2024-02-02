@@ -63,16 +63,17 @@ include_once("cek_login.php");
                   <tr>
                     <th>No</th>
                     <th>Kode Barang</th>
+                    <th>Nama Barang / Judul Buku</th>
                     <th>Kategori</th>
                     <th>Stok Barang</th>
-                    <th>Harga Barang</th>
+                    <th>Harga Satuan</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
                   <div class="container">
                   <div class="row">
                       <div class="col-md-12 m-auto mt-3">
-                        <a class="btn btn-outline-secondary mb-1" href = "tmbh_kategori.php" ><i class="fa-solid fa-user-plus"></i> Tambah Data </a>
+                        <a class="btn btn-outline-secondary mb-1" href = "tambah_brg.php" ><i class="fa-solid fa-user-plus"></i> Tambah Data Barang </a>
                       <div class="card">
                   <tbody>
                   <?php
@@ -101,7 +102,7 @@ include_once("cek_login.php");
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-3" id="exampleModalLabel">Data Detail <?php echo $data['kategori'] ?></h1>
+                        <h1 class="modal-title fs-3" id="exampleModalLabel">Data Detail <?php echo $data['nama'] ?></h1>
                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -122,7 +123,7 @@ include_once("cek_login.php");
                                 <br>
                                 <span class fs-3 text><?php echo $data['stok'] ?> </span>    
                                 <hr>
-                                <label for="harga" class="form-label"><b>Harga Barang</b></label>
+                                <label for="harga" class="form-label"><b>Harga Satuan</b></label>
                                 <br>
                                 <span class fs-3 text><?php echo $data['harga'] ?> </span>                           
                             </div>
@@ -166,9 +167,10 @@ include_once("cek_login.php");
                   <tr>
                   <th>No</th>
                     <th>Kode Barang</th>
+                    <th>Nama Barang / Judul Buku </th>
                     <th>Kategori</th>
                     <th>Stok Barang</th>
-                    <th>Harga Barang</th>
+                    <th>Harga Satuan</th>
                     <th>Aksi</th>
                   </tr>
                   </tfoot>

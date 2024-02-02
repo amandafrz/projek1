@@ -3,17 +3,14 @@
 include_once("koneksi.php");
 
 //2. mengambil seluruh nilai input dan dimasukkan ke variabel
-$id = $_POST['id'];
 $kd_brg = $_POST['kd_brg'];
 $nama = $_POST['nama'];
 $kategori = $_POST['kategori'];
 $stok = $_POST['stok'];
 $harga = $_POST['harga'];
 
-
-//3. membuat query update
 //3. membuat query INSERT
-$qry ="UPDATE barang SET kd_brg='$kd_brg',nama='$nama',kategoris_id='$kategori', stok='$stok',harga='$harga' WHERE id='$id'";
+$qry ="INSERT INTO barang (kd_brg,nama,kategoris_id,stok,harga) VALUES ('$kd_brg','$nama','$kategori','$stok','$harga')";
 
 //4. menjalankan query
 $simpan = mysqli_query($con,$qry);
