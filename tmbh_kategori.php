@@ -59,21 +59,22 @@ include_once("cek_login.php");
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form id="quickForm">
+              
                 <div class="card-body">
+                <form action="proses_tmbhkategori.php" method="POST" >
                   <div class="form-group">
-                    <label for="kd_kategori">Kode Kategori</label>
-                    <input type="kd_kategori" name="kd_kategori" class="form-control" id="kd_kategori" placeholder="kd_kategori">
+                    <label for="kd_kategori" class="form-label">Kode Kategori</label>
+                    <input type="kd_kategori" name="kd_kategori" class="form-control" id="kd_kategori" aria-describedy="kd_kategori">
                   </div>
                   <div class="form-group">
-                    <label for="kategori">Kategori</label>
-                    <input type="kategori" name="kategori" class="form-control" id="kategori" placeholder="kategori">
+                    <label for="kategori" class="form-label">Kategori</label>
+                    <input type="kategori" name="kategori" class="form-control" id="kategori" aria-describedy="kategori">
                   </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary ">Submit</button>
-                  <a class="btn btn-secondary" href = "tbkategori.php"> Batal </a>
+                  <a class="btn btn-secondary" href ="tbkategori.php"> Batal </a>
                 </div>
               </form>
             </div>
@@ -104,16 +105,16 @@ include_once("cek_login.php");
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- jquery-validation -->
-<script src="../../plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="../../plugins/jquery-validation/additional-methods.min.js"></script>
+<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="plugins/jquery-validation/additional-methods.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
+<script src="dist/js/demo.js"></script>
 <!-- Page specific script -->
 <script>
 $(function () {

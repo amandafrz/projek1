@@ -1,5 +1,11 @@
 <?php
-include_once("cek_login.php");
+include_once("koneksi.php");
+$id = $_GET['id'];
+$qry = "SELECT * FROM kategori WHERE id='$id'";
+$data = mysqli_query($con,$qry);
+
+$ktg = mysqli_fetch_array($data);
+
 ?>
 
 <!DOCTYPE html>
@@ -60,15 +66,17 @@ include_once("cek_login.php");
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form id="quickForm">
+              
                 <div class="card-body">
+                <form action="proses_editk.php" method="POST" >
+                <input type="hidden" name="id" value="<?php echo $ktg['id'] ?>">
                   <div class="form-group">
                     <label for="kd_kategori">Kode Kategori</label>
-                    <input type="kd_kategori" value="<?php echo $dt['kd_kategori'] ?>"  name="kd_kategori" class="form-control" id="kd_kategori" placeholder="kd_kategori">
+                    <input type="kd_kategori" value="<?php echo $ktg['kd_kategori']?>" name="kd_kategori" class="form-control" id="kd_kategori" placeholder="kd_kategori">
                   </div>
                   <div class="form-group">
                     <label for="kategori">Kategori</label>
-                    <input type="kategori" value="<?php echo $dt['kategori'] ?>"  name="kategori" class="form-control" id="kategori" placeholder="kategori">
+                    <input type="kategori" value="<?php echo $ktg['kategori']?>" name="kategori" class="form-control" id="kategori" placeholder="kategori">
                   </div>
                 </div>
                 <!-- /.card-body -->

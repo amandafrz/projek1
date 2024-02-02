@@ -13,7 +13,7 @@ include_once("cek_login.php");
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
@@ -88,19 +88,60 @@ include_once("cek_login.php");
                     <td><?php echo $nomor++ ?></td>
                     <td><?php echo $data['kd_kategori'] ?></td>
                     <td><?php echo $data['kategori'] ?></td>
-                    <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="#">
-                              <i class="fas fa-folder"></i></a>
-                          <a class="btn btn-info btn-sm" href="edit_ktgr.php">
-                              <i class="fas fa-pencil-alt"></i></a>
-                          <a class="btn btn-danger btn-sm" href="#">
-                              <i class="fas fa-trash">
-                              </i></a>
-                      </td>
+                    <td> <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal<?php echo $data['id'] ?>" class="btn-warning btn-sm "> <i class="fas fa-folder"> </td>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-3" id="exampleModalLabel">Data Detail <?php echo $data['kategori'] ?></h1>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                            <div class="mb-3">        
+                                <label for="kd_kategori" class="form-label"><b>Kode Kategori</b></label>
+                                <br>
+                                <span class fs-3 text><?php echo $data['kd_kategori'] ?> </span>
+                                <hr>
+                                <label for="kategori" class="form-label"><b>Kategori</b></label>
+                                <br>
+                                <span class fs-3 text><?php echo $data['kategori'] ?> </span>                            
+                            </div>
+                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                    <td><a href="formedit_kategori.php?id=<?php echo $data['id'] ?>" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i></a>
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus<?php echo $data['id'] ?>"><i class="fas fa-trash"></i></button>
+                    <!-- Modal -->
+                        <div class="modal fade" id="hapus<?php echo $data['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Peringatan</h1>
+                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                Apakah Kategori <b><?php echo $data['kategori'] ?></b> Ingin Di Hapus?
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                                <a href="proses_hapus.php?id=<?php echo $data['id'] ?>" class="btn btn-danger">Yes</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </td>
                   </tr>
                   <?php
-                    }
-                    ?>
+                      }
+                  ?>
+
                   </tbody>
                   <tfoot>
                   <tr>
@@ -137,7 +178,7 @@ include_once("cek_login.php");
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- DataTables  & Plugins -->
 <script src="plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-4/js/dataTables.bootstrap4.min.js"></script>
 <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
