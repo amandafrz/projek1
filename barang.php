@@ -136,7 +136,7 @@ include_once("cek_login.php");
                         </div>
                         </div>
                         </div>
-                    <td><a href="formedit_kategori.php?id=<?php echo $data['id_brg'] ?>" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i></a>
+                    <td><a href="formedit_brg.php?id=<?php echo $data['id_brg'] ?>" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i></a>
                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus<?php echo $data['id_brg'] ?>"><i class="fas fa-trash"></i></button>
                     <!-- Modal -->
                         <div class="modal fade" id="hapus<?php echo $data['id_brg'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
