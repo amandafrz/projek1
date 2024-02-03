@@ -14,5 +14,5 @@ $simpan = mysqli_query($con,$qry);
 //5.Redirect ke index 
 ?>
 <script>
-    document.location="index.php";
+    document.location="tbkategori.php";
 </script>

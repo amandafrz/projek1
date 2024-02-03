@@ -128,7 +128,7 @@ include_once("cek_login.php");
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                                <a href="proses_hapus.php?id=<?php echo $data['id'] ?>" class="btn btn-danger">Yes</a>
+                                <a href="proseshapus_kategori.php?id=<?php echo $data['id'] ?>" class="btn btn-danger">Yes</a>
                               </div>
                             </div>
                           </div>
