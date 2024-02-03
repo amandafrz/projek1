@@ -36,7 +36,7 @@ include_once("cek_login.php");
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Kategori Produk</h1>
+            <h1>Kategori Barang</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -53,9 +53,6 @@ include_once("cek_login.php");
 
       <!-- Default box -->
       <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
-              </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">

@@ -40,7 +40,7 @@ $sidebar = '#10316B';
             <a href="barang.php" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-               Produk
+               Barang
               </p>
             </a>
           </li>
@@ -48,7 +48,7 @@ $sidebar = '#10316B';
             <a href="tbkategori.php" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-               Kategori Produk
+               Kategori Barang
               </p>
             </a>
           </li>
